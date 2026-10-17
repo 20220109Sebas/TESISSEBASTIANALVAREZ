@@ -1,0 +1,10 @@
+{
+  "version": "document_validation_integration_revision_v3",
+  "reason": "fixed_availability_inventory_uses_two_initial_release_partitions_not_one",
+  "allowed_initial_release_partitions": ["data/raw/oece/contrast_candidate_versions_v1", "data/raw/oece/initial_releases"],
+  "every_selected_initial_release_requires_exact_preexisting_availability_sha256": true,
+  "seed_or_eligibility_or_sample_size_changed": false,
+  "change_before_pdf_access_or_reference_or_predictions": true,
+  "failed_v2_selection_preserved_no_output_overwrite": true,
+  "extractor_or_source_rules_or_comparison_changed": false
+}

@@ -1,0 +1,33 @@
+{
+  "version": "automatic_source_reference_protocol_v1",
+  "purpose": "document_experience_extraction_concordance_separate_from_ranking",
+  "reference_type": "automatic_source_review",
+  "is_human_or_expert": false,
+  "fields": ["billed_amount", "currency", "lookback_years"],
+  "identity": ["opportunity_id", "subject", "section_role", "item", "branch"],
+  "identity_policy": "exact_identity_no_best_match_by_amount",
+  "normalization": {
+    "billed_amount": "decimal_string_exactly_two_places_no_rounding_of_nonzero_extra_decimals",
+    "currency": "literal_ISO_currency_code_no_exchange_conversion",
+    "lookback_years": "integer_from_explicit_period_evidence_no_inference_from_personnel_tenure"
+  },
+  "reference_gates": [
+    "source_scope_confirmed_as_enterprise_services",
+    "all_document_pages_reviewed_and_coverage_recorded",
+    "source_only_first_pass_complete",
+    "source_only_second_pass_complete",
+    "disagreements_resolved_or_fields_left_unknown",
+    "reference_and_evaluation_code_locked_before_predictions"
+  ],
+  "unknown_field_policy": "ungraded_and_reported_separately_not_correct_or_zero",
+  "wrong_value_policy": "one_false_positive_and_one_false_negative",
+  "absent_prediction_for_known_value_policy": "one_false_negative",
+  "spurious_prediction_policy": "false_positive_only_in_a_complete_eligible_document_reference",
+  "empty_positive_support_policy": "recall_and_f1_null",
+  "denominator_policy": "report_all_50_selected_cases_and_access_scope_reference_exclusions_separately",
+  "duplicate_identity_policy": "stop_for_explicit_resolution_no_silent_deduplication",
+  "historical_ranking_eligibility": false,
+  "expert_semantic_accuracy_claim_permitted": false,
+  "hybrid_ranking_improvement_claim_permitted": false,
+  "predictions_generated": false
+}

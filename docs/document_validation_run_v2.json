@@ -1,0 +1,17 @@
+{
+  "version": "document_validation_integrated_run_v2",
+  "sample_size": 50,
+  "seed": "20261014-document-experience-validation-v2",
+  "runtime_change": "record_changed_bundled_python_binary_before_selection_new_source_lock_no_old_artifact_edits",
+  "selection_inputs": "title_description_object_type_publication_date_ocid_no_technical_text_or_awards",
+  "fixed_population": "retained_2025_annual_candidate_inventory",
+  "source_rules": "unchanged_document_source_design_v1",
+  "candidate": "unchanged_document_experience_text_candidate_v1",
+  "comparison": "unchanged_document_experience_evaluation_gates_v1",
+  "reference": "two_automatic_source_only_readings_before_inference_not_expert_or_independent",
+  "all_50_cases_retained": true,
+  "no_replacements_after_access": true,
+  "new_year_generalization_proven": false,
+  "historical_pdf_identity_proven": false,
+  "ranking_eligible": false
+}

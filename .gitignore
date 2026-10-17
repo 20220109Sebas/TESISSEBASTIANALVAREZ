@@ -1,0 +1,37 @@
+# Entornos, dependencias y archivos generados
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+node_modules/
+.ipynb_checkpoints/
+.DS_Store
+*.log
+
+# Credenciales y configuración local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.ssh/
+.idea/
+.vscode/
+
+# Las fuentes masivas y las salidas se regeneran; la muestra sí se publica.
+data/*
+!data/README.md
+!data/sample/
+artifacts/
+output/
+tmp/
+.cache/

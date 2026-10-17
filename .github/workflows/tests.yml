@@ -1,0 +1,26 @@
+name: Pruebas y demostración
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Instalar proyecto y herramientas de prueba
+        run: python -m pip install -e ".[dev]"
+      - name: Ejecutar pruebas autocontenidas
+        run: python -m pytest
+      - name: Ejecutar demostración sintética
+        run: tesis-recommender demo --data-dir data/sample --output-dir artifacts/demo

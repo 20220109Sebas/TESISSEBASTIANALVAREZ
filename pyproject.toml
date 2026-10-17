@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tesis-recommender"
+version = "0.1.0"
+description = "Recomendación explicable de licitaciones públicas de servicios con BM25, LaBSE y atributos históricos"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3"]
+authors = [{name = "Sebastian Alvarez Dominguez"}]
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=3.0,<6"]
+sources = ["httpx>=0.28,<1"]
+pdf = ["pypdf>=6.10,<7"]
+notebook = ["nbformat>=5,<6", "nbclient>=0.10,<1"]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1"]
+
+[project.scripts]
+tesis-recommender = "tesis_recommender.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

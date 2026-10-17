@@ -1,0 +1,6 @@
+opportunity_id,publication_date,title,description,technical_text,category,amount,region,object_type,source_url,awarded_supplier_id
+o1,2025-02-10,Desarrollo de plataforma web,Construcción de sistema institucional,API Python y base de datos,TI,90000,Lima,services,https://example.test/o1,empresa_ti
+o2,2025-03-12,Servicio integral de limpieza,Aseo de oficinas públicas,Personal e insumos de desinfección,Limpieza,48000,Arequipa,services,https://example.test/o2,empresa_limpieza
+o3,2025-04-05,Consultoría para mejora de procesos,Diagnóstico organizacional,Mapeo y rediseño de procesos,Consultoría,74000,Cusco,services,https://example.test/o3,empresa_consultoria
+o4,2025-05-09,Alquiler de vehículos,Movilidad institucional,Camionetas equipadas,Transporte,120000,Lima,services,https://example.test/o4,
+o5,2025-06-17,Adquisición de computadoras,Compra de equipos,Computadoras portátiles,TI,130000,Lima,goods,https://example.test/o5,

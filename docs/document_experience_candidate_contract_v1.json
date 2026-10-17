@@ -1,0 +1,75 @@
+{
+  "version": "document_experience_candidate_contract_v1",
+  "purpose": "freeze_text_input_extractor_and_identity_candidate_before_new_sample",
+  "model_stage": "candidate_not_validated_or_deployed",
+  "input": {
+    "format": "source_documents_json_list",
+    "max_documents": 50,
+    "max_physical_pages_per_document": 120,
+    "max_pdf_bytes": 10485760,
+    "physical_page_order": "all_pages_1_to_total_in_order_no_silent_truncation",
+    "allowed_text_methods": ["native_pdf_text", "apple_vision_local_ocr", "native_pdf_text_incomplete_ocr_unresolved"],
+    "native_text_and_sha256_required": true,
+    "ocr_json_path_and_sha256_required_when_used": true,
+    "unresolved_ocr": "preserve_native_text_and_flag_coverage_gap_never_infer_missing_content",
+    "historical_content_proven": false,
+    "ranking_eligible": false
+  },
+  "extraction": {
+    "implementation": "document_experience_dev_v2_plus_document_experience_units_dev_v1",
+    "max_clause_pages": 2,
+    "max_clause_characters": 6000,
+    "subject": "bidder",
+    "supported_roles": ["qualification", "evaluation_factor"],
+    "unsupported_role_policy": "retain_skipped_occurrence_evidence_do_not_promote_supplier_profile_personnel_or_annex",
+    "branch_names": ["general", "mype"],
+    "item_policy": "explicit_local_item_heading_only_no_reference_assignment",
+    "heading_normalization": "diacritic_fold_for_full_line_comparison_only_no_body_rewrite",
+    "fields": ["billed_amount", "currency", "lookback_years"]
+  },
+  "abstentions": {
+    "malformed_numeric_token": "amount_null_no_prefix_acceptance_or_arbitrary_digit_repair",
+    "nonpositive_or_noncanonical_amount": "reject_or_abstain_no_rounding",
+    "money_without_literal_supported_currency": "no_absolute_amount_or_currency_inference",
+    "relative_threshold": "do_not_compute_from_budget_or_infer_currency",
+    "explicit_parenthetical_centavos_conflict": "amount_null_preserve_literal_currency_and_warning",
+    "spanish_number_words": "not_a_complete_words_validator_report_semantic_consistency_unproven",
+    "missing_or_unsupported_window": "window_null_no_inheritance_from_general_branch_accreditation_or_personnel",
+    "unsupported_predicate_or_missing_ocr_text": "no_emission_is_not_proof_of_no_requirement",
+    "unit_identity_conflict": "stop_before_field_comparison_preserve_all_occurrences_no_value_selection"
+  },
+  "unit_policy": "docs/document_experience_occurrence_policy_v1.md",
+  "comparison": {
+    "fields": ["billed_amount", "currency", "lookback_years"],
+    "identity": ["opportunity_id", "subject", "section_role", "item", "branch"],
+    "engine": "src/tesis_recommender/reference_evaluation.py",
+    "normalization": "canonical_positive_two_decimal_string_literal_iso_currency_explicit_integer_years",
+    "unknown_reference": "ungraded_and_reported_not_success_or_zero",
+    "wrong_value": "one_fp_and_one_fn",
+    "missing_known_value": "one_fn",
+    "duplicate_identity": "stop_no_best_match_by_values",
+    "reference_type": "automatic_source_review",
+    "human_or_expert": false,
+    "source_only_two_passes_required": true,
+    "automatic_review_dependence_must_be_disclosed": true,
+    "reference_must_be_locked_before_inference": true,
+    "adapter_and_run_gates_not_yet_frozen": true
+  },
+  "change_policy": "any_model_or_contract_change_requires_new_version_never_refit_frozen_new_test",
+  "readiness": {
+    "model_interface_fixed": true,
+    "sampling_design_locked": false,
+    "source_acquisition_and_ocr_pipeline_locked": false,
+    "new_reference_locked": false,
+    "ready_to_select_new_evaluation_sample": false,
+    "ready_to_compute_new_metrics": false
+  },
+  "allowed_claims": {
+    "technical_regression_and_reproduction": true,
+    "new_unseen_accuracy": false,
+    "expert_semantic_accuracy": false,
+    "legal_eligibility": false,
+    "historical_ranking_integration": false,
+    "hybrid_superiority": false
+  }
+}

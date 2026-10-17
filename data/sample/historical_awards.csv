@@ -1,0 +1,7 @@
+award_id,supplier_id,award_date,title,description,technical_text,category,amount,region,object_type,source_url
+a1,empresa_ti,2022-03-10,Desarrollo de sistema web,Implementación de plataforma digital,Python API base de datos,TI,85000,Lima,services,https://example.test/a1
+a2,empresa_ti,2024-06-18,Mantenimiento de aplicaciones,Soporte y mejora de software,Aplicaciones web y servicios,TI,92000,Lima,services,https://example.test/a2
+a3,empresa_limpieza,2023-02-01,Limpieza institucional,Servicio integral de limpieza,Personal e insumos,Limpieza,45000,Arequipa,services,https://example.test/a3
+a4,empresa_limpieza,2024-09-11,Limpieza de oficinas,Mantenimiento y aseo,Desinfección y limpieza,Limpieza,50000,Arequipa,services,https://example.test/a4
+a5,empresa_consultoria,2022-08-15,Consultoría de procesos,Diagnóstico y mejora organizacional,Mapeo de procesos,Consultoría,70000,Cusco,services,https://example.test/a5
+a6,empresa_consultoria,2024-04-22,Estudio técnico,Evaluación y recomendaciones,Análisis institucional,Consultoría,76000,Cusco,services,https://example.test/a6

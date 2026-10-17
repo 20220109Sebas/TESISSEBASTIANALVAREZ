@@ -1,0 +1,48 @@
+{
+  "version": "document_source_design_v1",
+  "purpose": "prepare_source_text_before_reference_review_and_model_inference",
+  "access": {
+    "runner": "scripts/fetch_experience_documents.py",
+    "max_documents_per_batch": 5,
+    "max_bytes_per_document": 10485760,
+    "socket_timeout_seconds": 30,
+    "allowed_host": "prod1.seace.gob.pe",
+    "exact_document_url_validation_required": true,
+    "silent_replacements": false,
+    "failed_access_is_negative": false
+  },
+  "native": {
+    "engine": "pypdf",
+    "max_physical_pages": 120,
+    "max_characters_per_page": 200000,
+    "max_characters_per_document": 2000000,
+    "timeout_per_document_seconds": 90,
+    "partial_document_policy": "retain_status_exclude_from_complete_source_view_no_text_truncation",
+    "encrypted_or_parse_error_policy": "retain_status_not_absence_of_requirements"
+  },
+  "ocr": {
+    "selection": "all_pages_with_fewer_than_50_native_word_tokens_OR_image_at_least_600x600_pixels",
+    "selection_uses_experience_detections_or_reference": false,
+    "image_form_max_depth": 8,
+    "engine": "Apple Vision VNRecognizeTextRequest",
+    "revision": 3,
+    "dpi": 180,
+    "recognition_level": "accurate",
+    "languages": ["es-ES", "en-US"],
+    "language_correction": false,
+    "minimum_text_height": 0.003,
+    "workers": 1,
+    "timeout_per_page_seconds": 45,
+    "stop_after_consecutive_errors": 2,
+    "native_text_retained": true,
+    "empty_failed_unattempted_page_policy": "native_view_with_explicit_unresolved_ocr_flag",
+    "confidence_is_semantic_accuracy": false,
+    "external_service": false
+  },
+  "duplicate_pdf": "exclude_known_batch_or_cross_batch_duplicate_hashes_without_silent_replacement_keep_duplicate_documents_separately",
+  "coverage": "retain_every_selected_source_status_and_all_physical_pages_of_complete_accepted_documents",
+  "historical_content_proven": false,
+  "ranking_eligible": false,
+  "model_inference_during_source_preparation": false,
+  "reference_values_used": false
+}
