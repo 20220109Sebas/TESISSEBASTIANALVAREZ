@@ -59,7 +59,7 @@ Las fuentes masivas, los PDF y los resultados históricos no están incorporados
 | `config/` | Parámetros de referencia del estudio |
 | `notebooks/` | Recorridos de demostración y exploración de calidad |
 | `docs/` | Arquitectura, ejecución, diccionario y protocolos |
-| `documentos/` | Índice de la ficha de investigación y del artículo |
+| `documentos/` | Ficha de investigación y artículo en PDF, con enlaces a sus originales |
 
 ## Verificación y alcance
 

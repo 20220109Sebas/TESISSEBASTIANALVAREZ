@@ -9,6 +9,9 @@ Exportación del 17 de octubre de 2026, sin modificaciones del contenido. El doc
 
 ## Artículo
 
-La publicación del artículo está pendiente de confirmar su sección de declaraciones. No se modifica el documento académico durante la exportación.
+- [Artículo de investigación — SEMI 2026-II (PDF)](articulo/Articulo_de_investigacion_SEMI_2026_II.pdf)
+- [Documento original en Google Docs](https://docs.google.com/document/d/1cKOhUG5bVB_x5OHeIvCeSmGIobFZ_ZHHEQU2fHPSeyE/edit)
+
+Exportación del 17 de octubre de 2026, sin modificaciones del contenido ni de las declaraciones. El documento original registra su última modificación el 11 de octubre de 2026. El PDF tiene 18 páginas.
 
 Los documentos reflejan la versión académica de su fecha; no sustituyen los datos y manifiestos de las ejecuciones más recientes del código.
