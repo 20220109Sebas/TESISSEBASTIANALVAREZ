@@ -24,11 +24,11 @@
   "codigo_contraste/text.py": "149c692b1883e9468b3d114d271c6c7c3a9d394f163322d17b07268dbabbdeb2",
   "codigo_contraste/validation.py": "6c7d93a1d06cc8ee04040f861d84817ad13989ec6cc2e0abf017c6ce66fe8403",
   "contrastes_agregacion.json": "e7f47f74d3925689851db83efe5fe4486ad6d65ec569e7a076b2cf0fae894fb7",
-  "contrastes_originales.csv": "e339c64c9b84471aae0a7749b0d3df7e5e62bc5a54bcbf2039ca9eabdec828ea",
+  "contrastes_originales.csv": "7d1b9530fe595937948949b305311a22d5051525b8e4c45ebfe5de17fd06ab6a",
   "ejecucion.json": "bb8416f397f7d2fdf7c04cc2b3f1ebcd95c388de4ecebe760fad5124beb4ea19",
-  "extraccion_documental.csv": "b66723ea116e8e14cc74eeb3bdfc006d1df908ebb4686146397c7acfd5a664e1",
+  "extraccion_documental.csv": "a1f5af404b255e927a622decf4a1215439f30ce9f5eb2dda1c6d2b00c82837d4",
   "metricas_esperadas.json": "444b0ff298dec8c27b4931ba71278a01f658362690041e14bc472b86043f8922",
   "procedencia.json": "76dff8a75d1f0062bf02723be5fd8647a4182c56d5359f31c664854971bcb9fa",
-  "recuperacion_por_perfil.csv": "e68c42dc2ca4e6bbb3f2be46b0db608b095b8f5f5f8439aa344371d05c8006b8",
+  "recuperacion_por_perfil.csv": "7dbb6697d24863dac0a8d9f8286db843ccd31597b3b84916cf83503615eecb5e",
   "verificar_resultados.py": "94ae8216629c6ebb8da907e0f0b97302f1ea94439fe55d8fe30cc805736cd3d7"
 }
