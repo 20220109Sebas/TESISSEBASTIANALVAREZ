@@ -1,0 +1,29 @@
+{
+  "fecha_corte_documento": "2026-10-26",
+  "python_minimo": "3.10",
+  "codigo_publicado_base": "91f85d6034303f3d3aabd8097c975233532587aa",
+  "poblacion": {
+    "profiles": 49,
+    "candidates": 33584,
+    "known_positive_pairs": 28,
+    "profiles_with_known_positives": 13,
+    "profiles_without_known_positives": 36
+  },
+  "antecedentes": 210,
+  "rankings_originales": 196,
+  "filas_originales": 6582464,
+  "explicaciones_originales": 1960,
+  "documentos_seleccionados": 50,
+  "pdf_elegibles": 23,
+  "documentos_empresariales_evaluables": 17,
+  "referencia_documental": "Referencia automática fijada antes de la inferencia; comparación por rol, ítem y rama.",
+  "perfil": "Identificadores P01–P13 en el orden de los identificadores originales, conservado para el remuestreo.",
+  "modelo": "sentence-transformers/LaBSE",
+  "revision_modelo": "836121a0533e5664b21c7aacc5d22951f2b8b25b",
+  "bootstrap": {
+    "replicas": 5000,
+    "semilla": 42,
+    "unidad": "perfil",
+    "intervalo": "percentil 95 %"
+  }
+}

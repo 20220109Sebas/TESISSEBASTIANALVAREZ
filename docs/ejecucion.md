@@ -99,3 +99,15 @@ Los JSON y Markdown versionados de `docs/` describen contratos y decisiones de d
 - Los scripts de registro de lecturas y de congelamiento conservan sus dependencias entre etapas. No son comandos iniciales para una carpeta sin datos.
 
 La copia publicada incorpora ajustes de portabilidad y presentación. No sustituye los snapshots de código vinculados mediante hash a ejecuciones previas ni modifica sus resultados.
+
+## 6. Recalcular los resultados del artículo
+
+El [suplemento de la entrega parcial](../reproducibilidad/nota2_20261026/README.md) permite obtener las tres tablas y los intervalos pareados con la biblioteca estándar de Python:
+
+```bash
+python reproducibilidad/nota2_20261026/verificar_resultados.py --output salida_resultados_nota2
+```
+
+El programa rechaza una carpeta de salida existente y comprueba los hashes de sus entradas antes de calcular. Recalcula las métricas desde los aciertos y positivos por perfil, y desde los TP, FP y FN documentales. Los intervalos reutilizan el orden de los perfiles, 5000 réplicas y semilla 42. La guía del suplemento identifica la procedencia de los archivos y las copias del código original.
+
+Esta ruta reproduce el cálculo de las tablas. Para volver a producir los rankings o regenerar los embeddings se necesitan las entradas canónicas y la caché indicadas en el artículo; la demostración sintética no sustituye ese experimento.

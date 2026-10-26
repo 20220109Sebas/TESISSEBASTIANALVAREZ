@@ -46,7 +46,17 @@ tesis-recommender run \
 
 La primera ejecución requiere conexión para descargar `sentence-transformers/LaBSE`. El modelo se utiliza preentrenado; este proyecto no lo entrena desde cero. Las etiquetas de evaluación se proporcionan por separado con `--labels`, y no se utilizan para generar el ranking.
 
-Las fuentes masivas, los PDF y los resultados históricos no están incorporados al repositorio. Se incluye el código para obtener y transformar las fuentes, junto con una muestra ejecutable. Consulta [ejecución y datos](docs/ejecucion.md) para conocer los requisitos y los límites de reproducción.
+Las fuentes masivas, los PDF, los vectores y los rankings históricos completos no están incorporados al repositorio. Se incluye el código para obtener y transformar las fuentes, junto con una muestra ejecutable. Consulta [ejecución y datos](docs/ejecucion.md) para conocer los requisitos de las corridas completas.
+
+## Recalcular las tablas del artículo
+
+El [suplemento de resultados del 26 de octubre de 2026](reproducibilidad/nota2_20261026/README.md) conserva los conteos por perfil y campo, los controles de integridad y las copias del código de las ejecuciones. Con Python 3.10 o superior, sin instalar bibliotecas adicionales:
+
+```bash
+python reproducibilidad/nota2_20261026/verificar_resultados.py --output salida_resultados_nota2
+```
+
+El comando recalcula las tres tablas y los intervalos pareados del artículo. Genera los CSV y un informe JSON en una carpeta nueva. Esta comprobación usa los conteos archivados; la ejecución completa del ranking requiere sus fuentes y vectores originales.
 
 ## Organización
 
@@ -65,6 +75,6 @@ Las fuentes masivas, los PDF y los resultados históricos no están incorporados
 
 `python -m pytest` ejecuta las pruebas autocontenidas. Los verificadores que necesitan el corpus, los PDF o las salidas archivadas se conservan, pero requieren `--run-integration` y sus entradas originales. No forman parte de la comprobación rápida de una descarga nueva. Detalles en [pruebas](tests/README.md).
 
-El contraste de ranking y la evaluación documental son componentes distintos. La existencia de código de extracción no significa que la nueva evaluación documental esté cerrada. Los protocolos conservan sus versiones y las métricas solo deben interpretarse junto con su muestra, referencia y evidencia.
+El contraste de ranking y la evaluación documental son componentes distintos. La evaluación documental compara los campos con la referencia automática fijada por su protocolo. Las métricas se interpretan junto con su muestra, referencia y evidencia.
 
 Más información: [arquitectura](docs/arquitectura.md), [ejecución](docs/ejecucion.md) y [documentos académicos](documentos/README.md).
