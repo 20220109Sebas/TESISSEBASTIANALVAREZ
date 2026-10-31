@@ -1,8 +1,0 @@
-{
-  "artifacts/analysis_annual_v1/per_profile_metrics.csv": "24345bd61a1f830a3c84c1a5600ff2639167f52c53a36284abd319246a0520a1",
-  "artifacts/semantic_aggregation_contrast_v1/per_profile_metrics.json": "2db38f112ef2b32904a7a24b6ebe00388931f180a6f0ac691ae075c3f08c48c6",
-  "artifacts/document_selective_evaluation_current_v1/comparison.json": "17d5d335de4ce7b19a1e2e1b09a9bf26be259f2b07d6dbf85a156afb190d0e09",
-  "artifacts/experiment_annual_v1/results.json": "f78de8fa357af95842b98c303be67edc9b94a705f45d831a649af75c2f9bb296",
-  "artifacts/semantic_aggregation_contrast_v1/results.json": "0fea109f4839e18962a005ca921fe42a9fc35d234b22f3c79bb26ab25db6a182",
-  "artifacts/analysis_annual_v1/paired_comparisons.csv": "e339c64c9b84471aae0a7749b0d3df7e5e62bc5a54bcbf2039ca9eabdec828ea"
-}

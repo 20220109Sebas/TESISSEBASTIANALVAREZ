@@ -6,7 +6,6 @@ build-backend = "setuptools.build_meta"
 name = "tesis-recommender"
 version = "0.1.0"
 description = "Recomendación explicable de licitaciones públicas de servicios con BM25, LaBSE y atributos históricos"
-readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.26,<3"]
 authors = [{name = "Sebastian Alvarez Dominguez"}]
